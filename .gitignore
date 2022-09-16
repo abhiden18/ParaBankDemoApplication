@@ -1,0 +1,16 @@
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.iml
+/target/
+.classpath
+.project
+.settings/
+.idea/compiler.xml
+.idea/
+.autoGenerateRunner/
+
