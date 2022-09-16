@@ -158,6 +158,7 @@ public class BillPaymentStepDef {
 
     @Then("I verify the transaction details as (.+)$")
     public void i_verify_the_transaction_details(String amount) {
+        log.info("verify transaction has completed successfully.");
         homePage.verifyTransactionDetails(LoginUser.senderAccountNumber,payee.getNameObj().getFirst(),payee.getNameObj().getLast(),amount);
     }
 
