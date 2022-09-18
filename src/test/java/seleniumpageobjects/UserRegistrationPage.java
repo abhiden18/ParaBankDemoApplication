@@ -91,13 +91,13 @@ public class UserRegistrationPage {
 		this.zipCode.sendKeys(sender.getLocationObj().getPostcode());
 		this.phone.sendKeys(sender.getPhone());
 		this.ssn.sendKeys(sender.getIdObj().getValue());
-		this.userName.sendKeys("James Bond");
+		this.userName.sendKeys(sender.getLoginObj().getUsername());
 		this.password.sendKeys(sender.getLoginObj().getPassword());
 		this.repeatPassowrd.sendKeys(sender.getLoginObj().getPassword());
 
 		clickRegistrationButton();
 
-		if(SeleniumBase.isElementVisible(userNameError)){
+		while(SeleniumBase.isElementVisible(userNameError)){
 			this.userName.clear();
 			this.userName.sendKeys(sender.getLoginObj().getUsername()+ Operation.getRandomNumber());
 			this.password.sendKeys(sender.getLoginObj().getPassword());
@@ -111,6 +111,7 @@ public class UserRegistrationPage {
 	public void clickRegistrationButton() {
 		assertTrue("Registration button not found!", SeleniumBase.isElementVisible(registerBtn));
 		SeleniumBase.jsClick(registerBtn);
+		SeleniumBase.sleep(2000);
 
 	}
 

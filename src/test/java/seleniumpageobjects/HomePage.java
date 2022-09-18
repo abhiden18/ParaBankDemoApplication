@@ -120,5 +120,6 @@ public class HomePage {
 		assertEquals("Payee name is incorrect",payeeName.getText(),payeeFirstName+" "+payeeLastName);
 		assertEquals("Sender Account details are incorrect",senderAccount.getText(),senderAccNo);
 		assertEquals("Transaction Amount is incorrect",amount.getText(),transactionAmt);
+		SeleniumBase.sleep(2000);
 	}
 }
