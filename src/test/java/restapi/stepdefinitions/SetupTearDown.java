@@ -72,7 +72,7 @@ public class SetupTearDown {
 				final byte[] screenshot = ((TakesScreenshot) CommonStepData.baseInstanceDriver).getScreenshotAs(OutputType.BYTES);
 			}
 		} catch (WebDriverException somePlatformsDontSupportScreenshots) {
-			log.error(somePlatformsDontSupportScreenshots.getMessage());echo "# ParaBankDemoApplication" >> README.md
+			log.error(somePlatformsDontSupportScreenshots.getMessage());
 		} finally {
 			CommonStepData.baseInstanceDriver.manage().deleteAllCookies();
 			CommonStepData.baseInstanceDriver.quit();
