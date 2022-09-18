@@ -75,7 +75,7 @@ public class SetupTearDown {
 			log.error(somePlatformsDontSupportScreenshots.getMessage());
 		} finally {
 			CommonStepData.baseInstanceDriver.manage().deleteAllCookies();
-			CommonStepData.baseInstanceDriver.quit();
+			//CommonStepData.baseInstanceDriver.quit();
 		}
 
 		log.info("Successfully killed chromedriver instances.");

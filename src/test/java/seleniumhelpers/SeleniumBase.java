@@ -192,7 +192,7 @@ public class SeleniumBase {
 	 * Take a screenshot.
 	 * 
 	 * @param path
-	 *            - Directory and name of screenshot.
+	 *            - Directory and Name of screenshot.
 	 */
 	public static void takeScreenshot(final String path) {
 		final File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

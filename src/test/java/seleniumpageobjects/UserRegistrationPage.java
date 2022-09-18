@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import restapi.entity.results;
+import restapi.entity.Results;
 import restapi.utilities.Operation;
 import seleniumhelpers.SeleniumBase;
 
@@ -61,10 +61,10 @@ public class UserRegistrationPage {
 	@FindBy(how = How.ID, using = "repeatedPassword")
 	private WebElement repeatPassowrd;
 
-	@FindBy(how = How.XPATH, using = "//div[@id='rightPanel']//input[contains(@class,'button')]")
+	@FindBy(how = How.XPATH, using = "//div[@Id='rightPanel']//input[contains(@class,'button')]")
 	private WebElement registerBtn;
 
-	@FindBy(how = How.XPATH, using = "//div[@id='rightPanel']//p")
+	@FindBy(how = How.XPATH, using = "//div[@Id='rightPanel']//p")
 	private WebElement registrationConfirmationMessage;
 
 	@FindBy(how = How.ID, using = "customer.username.errors")
@@ -80,7 +80,7 @@ public class UserRegistrationPage {
 
 
 
-	public void enterUserRegistrationDetails(results sender) {
+	public void enterUserRegistrationDetails(Results sender) {
 		SeleniumBase.sleep(1000);
 		assertTrue("First Name is not visible on Registration page.",SeleniumBase.isElementVisible(this.firstName));
 		this.firstName.sendKeys(sender.getNameObj().getFirst());

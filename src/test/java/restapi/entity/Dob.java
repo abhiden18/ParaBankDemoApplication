@@ -10,7 +10,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Getter
 @Setter
-public class dob implements Serializable {
+public class Dob implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

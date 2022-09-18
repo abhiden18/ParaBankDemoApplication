@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import restapi.common.Constants;
-import restapi.entity.results;
+import restapi.entity.Results;
 import seleniumhelpers.SeleniumBase;
 
 import static org.junit.Assert.assertTrue;
@@ -59,7 +59,7 @@ public class BillPaymentPage {
 	@FindBy(how = How.XPATH, using = "//input[@value='Send Payment']")
 	private WebElement submitBtn;
 
-	@FindBy(how = How.XPATH, using = "//div[@id='rightPanel']//p")
+	@FindBy(how = How.XPATH, using = "//div[@Id='rightPanel']//p")
 	private WebElement billPayConfirmationMessage;
 
 
@@ -77,7 +77,7 @@ public class BillPaymentPage {
 	}
 
 
-	public void enterBillPaymentDetails(results payee,String amount) {
+	public void enterBillPaymentDetails(Results payee, String amount) {
 		SeleniumBase.sleep(1000);
 		this.payeeName.sendKeys(payee.getNameObj().getFirst()+" "+payee.getNameObj().getLast());
 		this.address.sendKeys(payee.getLocationObj().getStreetObj().getNumber() + "," + payee.getLocationObj().getStreetObj().getName());

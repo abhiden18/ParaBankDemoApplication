@@ -10,12 +10,16 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Getter
 @Setter
-public class timezone implements Serializable {
+public class Info implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @JsonProperty("offset")
-    private String offset;
-    @JsonProperty("description")
-    private String description;
+    @JsonProperty("seed")
+    private String seed;
+    @JsonProperty("results")
+    private int results;
+    @JsonProperty("page")
+    private int page;
+    @JsonProperty("version")
+    private String version;
 }

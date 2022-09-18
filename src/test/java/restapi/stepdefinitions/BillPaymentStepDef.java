@@ -11,8 +11,8 @@ import io.restassured.specification.RequestSpecification;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.runner.RunWith;
-import restapi.entity.Result;
-import restapi.entity.results;
+import restapi.entity.UserDetails;
+import restapi.entity.Results;
 import restapi.utilities.ConfigurationProperties;
 import seleniumhelpers.SeleniumBase;
 import seleniumpageobjects.BillPaymentPage;
@@ -26,9 +26,9 @@ import static org.junit.Assert.assertTrue;
 @RunWith(Cucumber.class)
 public class BillPaymentStepDef {
 
-    public results sender;
-    public results payee;
-    public Result result;
+    public Results sender;
+    public Results payee;
+    public UserDetails result;
     public HomePage homePage;
     public UserRegistrationPage userRegistrationPage;
     public BillPaymentPage billPaymentPage;
@@ -62,11 +62,10 @@ public class BillPaymentStepDef {
 
         RequestSpecification requestSpecification = given();
         Response response = requestSpecification.get();
-        result = response.getBody().as(Result.class);
+        result = response.getBody().as(UserDetails.class);
         assertTrue("Random API response is not null",
                 result != null && result.getResultsObj().size() > 0);
         sender = result.getResultsObj().get(0);
-
         LoginUser.senderUserName = sender.getLoginObj().getUsername();
         LoginUser.senderPassword = sender.getLoginObj().getPassword();
 
@@ -112,7 +111,7 @@ public class BillPaymentStepDef {
         log.info("Start call to Random API to create Payee User");
         RequestSpecification requestSpecification = given();
         Response response = requestSpecification.get();
-        result = response.getBody().as(Result.class);
+        result = response.getBody().as(UserDetails.class);
         payee = result.getResultsObj().get(0);
         LoginUser.payeeUserName = payee.getLoginObj().getUsername();
         LoginUser.payeePassword = payee.getLoginObj().getPassword();
@@ -126,7 +125,7 @@ public class BillPaymentStepDef {
         homePage.goToBillPayPage();
     }
 
-    @And("^I enter the login details of Sender$")
+    @And("^I enter the Login details of Sender$")
     public void i_enter_the_login_details_of_Sender() throws Throwable {
         homePage.enterLoginDetails(LoginUser.senderUserName,LoginUser.senderPassword);
     }

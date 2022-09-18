@@ -92,7 +92,7 @@ public class HomePage {
 
 
 	/***
-	 * Enter login Credentials.
+	 * Enter Login Credentials.
 	 */
 	public void enterLoginDetails(String user,String password)
 	{
@@ -117,7 +117,7 @@ public class HomePage {
 	 */
 	public void verifyTransactionDetails(String senderAccNo,String payeeFirstName,String payeeLastName,String transactionAmt) {
 		SeleniumBase.sleep(2000);
-		assertEquals("Payee name is incorrect",payeeName.getText(),payeeFirstName+" "+payeeLastName);
+		assertEquals("Payee Name is incorrect",payeeName.getText(),payeeFirstName+" "+payeeLastName);
 		assertEquals("Sender Account details are incorrect",senderAccount.getText(),senderAccNo);
 		assertEquals("Transaction Amount is incorrect",amount.getText(),transactionAmt);
 		SeleniumBase.sleep(2000);

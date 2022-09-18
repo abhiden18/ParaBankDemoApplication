@@ -10,12 +10,12 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Getter
 @Setter
-public class location implements Serializable {
+public class Location implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @JsonProperty("street")
-    private street streetObj;
+    private Street streetObj;
     @JsonProperty("city")
     private String city;
     @JsonProperty("state")
@@ -25,8 +25,8 @@ public class location implements Serializable {
     @JsonProperty("postcode")
     private String postcode;
     @JsonProperty("coordinates")
-    private coordinates coordinatesObj;
+    private Coordinates coordinatesObj;
     @JsonProperty("timezone")
-    private timezone timezoneObj;
+    private Timezone timezoneObj;
 
 }

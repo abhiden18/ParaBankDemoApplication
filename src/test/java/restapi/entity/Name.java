@@ -10,13 +10,14 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Getter
 @Setter
-public class coordinates implements Serializable {
+public class Name implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @JsonProperty("latitude")
-    private String latitude;
-
-    @JsonProperty("longitude")
-    private String longitude;
+    @JsonProperty("title")
+    private String title;
+    @JsonProperty("first")
+    private String first;
+    @JsonProperty("last")
+    private String last;
 }

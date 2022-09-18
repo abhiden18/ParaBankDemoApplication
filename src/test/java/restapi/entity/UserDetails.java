@@ -6,18 +6,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
 
 @NoArgsConstructor
 @Getter
 @Setter
-public class picture implements Serializable {
-
+public class UserDetails implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    @JsonProperty("large")
-    private String large;
-    @JsonProperty("medium")
-    private String medium;
-    @JsonProperty("thumbnail")
-    private String thumbnail;
+    @JsonProperty("results")
+    private List<Results> resultsObj = null;
+    @JsonProperty("info")
+    private Info infoObj;
 }
+

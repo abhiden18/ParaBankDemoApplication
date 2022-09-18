@@ -10,13 +10,12 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Getter
 @Setter
-public class id implements Serializable {
+public class Timezone implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
-    @JsonProperty("name")
-    private String name;
-
-    @JsonProperty("value")
-    private String value;
-
+    @JsonProperty("offset")
+    private String offset;
+    @JsonProperty("description")
+    private String description;
 }

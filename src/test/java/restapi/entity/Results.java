@@ -10,32 +10,32 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Getter
 @Setter
-public class results implements Serializable {
+public class Results implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @JsonProperty("gender")
     private String gender;
     @JsonProperty("name")
-    private name nameObj;
+    private Name nameObj;
     @JsonProperty("location")
-    private location locationObj;
+    private Location locationObj;
     @JsonProperty("email")
     private String email;
     @JsonProperty("login")
-    private login loginObj;
+    private Login loginObj;
     @JsonProperty("dob")
-    private dob dobObj;
+    private Dob dobObj;
     @JsonProperty("registered")
-    private registered registeredObj;
+    private Registered registeredObj;
     @JsonProperty("phone")
     private String phone;
     @JsonProperty("cell")
     private String cell;
     @JsonProperty("id")
-    private id idObj;
+    private Id idObj;
     @JsonProperty("picture")
-    private picture pictureObj;
+    private Picture pictureObj;
     @JsonProperty("nat")
     private String nat;
 

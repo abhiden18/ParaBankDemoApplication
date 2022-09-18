@@ -10,14 +10,13 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Getter
 @Setter
-public class name implements Serializable {
+public class Registered implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @JsonProperty("title")
-    private String title;
-    @JsonProperty("first")
-    private String first;
-    @JsonProperty("last")
-    private String last;
+    @JsonProperty("date")
+    private String date;
+    @JsonProperty("age")
+    private int age;
+
 }

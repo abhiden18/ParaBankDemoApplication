@@ -6,17 +6,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.util.List;
 
 @NoArgsConstructor
 @Getter
 @Setter
-public class Result implements Serializable {
+public class Id implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    @JsonProperty("results")
-    private List<results> resultsObj = null;
-    @JsonProperty("info")
-    private info infoObj;
-}
+    @JsonProperty("name")
+    private String name;
 
+    @JsonProperty("value")
+    private String value;
+
+}
